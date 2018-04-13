@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+import "producer.proto";
+
+message Event {
+
+    option (type) = TYPE_2;
+    option (id) = 250;
+
+    optional uint32 eid= 1 [(producer_required) = true, (fix_size)=16];
+    optional uint32 cid= 2;
+    optional uint32 fid= 3;
+
+}
+

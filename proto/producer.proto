@@ -1,0 +1,19 @@
+syntax = "proto2";
+
+import "google/protobuf/descriptor.proto";
+
+enum Type {
+    TYPE_1 = 1;
+    TYPE_2 = 2;
+    TYPE_3 = 3;
+}
+
+extend google.protobuf.MessageOptions {
+    optional Type type = 1000;
+    optional uint32 id = 1001;
+}
+
+extend google.protobuf.FieldOptions {
+    optional bool producer_required = 1000;
+    optional int32 fix_size = 1001;
+}

@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+message Event {
+    required uint32 eid= 1;
+    optional uint32 cid= 2;
+    optional uint32 xid= 3;
+}
+
